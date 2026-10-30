@@ -113,6 +113,13 @@ code {
   background: var(--code-bg);
 }
 
+.counter-box {
+  max-width: 240px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
 .counter-button {
   margin: 10px;
   border-color: magenta;

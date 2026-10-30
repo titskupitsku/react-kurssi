@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+
 
 type Props = {
     count: number;
@@ -34,11 +32,15 @@ function Counter({ count: alkuarvo, onChange }: Props) {
     }
 
   return (
-    <Container>
-      <Row>
-        <Col>
+    <Container className="counter-box">
+      <Row className="align-items-center">
+        <Col className="text-start">
             <Button className="counter-button" variant="success" onClick={decreaseCount} type="button">-</Button>
+        </Col>
+        <Col className="text-center">
             <span>{count}</span>
+        </Col>
+        <Col className="text-end">
             <Button className="counter-button" variant="success" onClick={increaseCount} type="button">+</Button>
         </Col>
       </Row>
