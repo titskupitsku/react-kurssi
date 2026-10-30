@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 type Props = {
     count: number;
+    onChange: (value: number) => void;
 };
 
 /**
@@ -17,15 +18,19 @@ type Props = {
  * 
  * @returns laskurin näkymä.
  */
-function Counter({ count: alkuarvo }: Props) {
+function Counter({ count: alkuarvo, onChange }: Props) {
     const [count, setCount] = useState(alkuarvo);
 
     function decreaseCount() {
-        setCount(count - 1);
+        const uusArvo = count - 1;
+        setCount(uusArvo);
+        onChange(uusArvo);
     }
 
     function increaseCount() {
-        setCount(count + 1);
+        const uusArvo = count + 1;
+        setCount(uusArvo);
+        onChange(uusArvo);
     }
 
   return (
