@@ -115,6 +115,7 @@ code {
 
 .counter-button {
   margin: 10px;
+  border-color: pink;
   padding-top: 3px;
   padding-bottom: 3px;
   padding-right: 10px;

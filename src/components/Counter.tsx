@@ -4,12 +4,21 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
+type Props = {
+    count: number;
+};
+
 /**
- * Näyttää laskurin, jonka lähtöarvo on nolla.
+ * Näyttää laskurin, jonka lähtöarvo on määritelty luku.
+ * 
+ * @param props.count
+ * 
  * + ja - painikkeet kasvattavat ja laskevat arvoa.
+ * 
+ * @returns laskurin näkymä.
  */
-function Counter() {
-    const [count, setCount] = useState(0);
+function Counter({ count: alkuarvo }: Props) {
+    const [count, setCount] = useState(alkuarvo);
 
     function decreaseCount() {
         setCount(count - 1);
