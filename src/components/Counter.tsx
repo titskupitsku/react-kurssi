@@ -32,7 +32,7 @@ function Counter({ count: alkuarvo, onChange }: Props) {
     }
 
   return (
-    <Container className="counter-box">
+    <Container className="Counter">
       <Row className="align-items-center">
         <Col className="text-start">
             <Button className="counter-button" variant="success" onClick={decreaseCount} type="button">-</Button>
