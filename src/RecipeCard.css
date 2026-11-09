@@ -1,14 +1,18 @@
 .card {
-    width: 288px;
-    margin-bottom: 20px;
-    margin-left: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.card .card-img-top {
+  height: 260px;
+  object-fit: cover;
 }
 
 .card-title {
-    font-size: 18px;
-    font-weight: 500;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .card-text {
-    font-size: 16px;
+  font-size: 16px;
 }
