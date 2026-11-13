@@ -32,6 +32,7 @@ function App() {
               title="My Awesome Kebab"
               description="Very tasty kebab with lamb meat and hot spices, which we can cook on the grill in the winter when outside is freezing cracking show and inside the fire cracks in the stove."
               pictureUrl="https://images.pexels.com/photos/8963961/pexels-photo-8963961.jpeg"
+              items={recipeItems}
             />
           </Col>
           <Col xs={12} md={6}>
@@ -39,6 +40,7 @@ function App() {
               title="Delicious Pizza"
               description="Yummy yummy pizza super delish and cheesy and gooey and omnomnomnom so so YUMMY wow a true winner next up: the entire bee movie script"
               pictureUrl="https://images.pexels.com/photos/31596394/pexels-photo-31596394.jpeg"
+              items={recipeItems}
             />
           </Col>
         </Row>
@@ -53,6 +55,7 @@ function App() {
               title="Yummy Yum Pasta"
               description="Boy, quite a bit of pomp... under the circumstances. - Well, Adam, today we are men. -We are! - Bee-men. - Amen! Hallelujah!"
               pictureUrl="https://images.pexels.com/photos/34890641/pexels-photo-34890641.jpeg"
+              items={recipeItems}
             />
           </Col>
           <Col xs={12} md={6}>
@@ -60,6 +63,7 @@ function App() {
               title="Chicken Wing-desu"
               description="Here we go. Keep your hands and antennas inside the tram at all times. - Wonder what it'll be like? - A little scary. Welcome to Honex, a division of Honesco and a part of the Hexagon Group. "
               pictureUrl="https://images.pexels.com/photos/36863569/pexels-photo-36863569.jpeg"
+              items={recipeItems}
             />
           </Col>
         </Row>
