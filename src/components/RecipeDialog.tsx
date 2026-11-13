@@ -18,7 +18,7 @@ type Props = {
 export default function RecipeDialog ({ title, description, pictureUrl, items, show, setShow }: Props ) {
     return (
         <Modal show={show} onHide={() => setShow(false)}>
-            <Modal.Header closeButton>
+            <Modal.Header>
                 <Modal.Title>{title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
