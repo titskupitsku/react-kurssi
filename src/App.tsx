@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Counter from "./components/Counter.tsx";
 import RecipeCard from "./components/RecipeCard.tsx";
+import RecipeItem from "./components/RecipeItem.tsx";
 import "./Counter.css";
 import "./RecipeCard.css";
 
@@ -17,7 +18,7 @@ function App() {
       <Counter count={5} onChange={handleCounterChange} />
       <Counter count={-3} onChange={handleCounterChange} />
       <Container>
-        <Row className="g-4 mb-4">
+        <Row className="recipe-card-row">
           <Col xs={12} md={6}>
             <RecipeCard
               title="My Awesome Kebab"
@@ -33,7 +34,12 @@ function App() {
             />
           </Col>
         </Row>
-        <Row className="g-4 mb-4">
+        <Row className="mt-2 mb-2">
+          <Col>
+          <RecipeItem name="Hot chili, tsp " amount={3}/>
+          </Col>
+        </Row>
+        <Row className="recipe-card-row">
           <Col xs={12} md={6}>
             <RecipeCard
               title="Yummy Yum Pasta"
