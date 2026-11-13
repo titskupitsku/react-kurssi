@@ -1,9 +1,17 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Counter from "./components/Counter.tsx";
 import RecipeCard from "./components/RecipeCard.tsx";
-import RecipeItem from "./components/RecipeItem.tsx";
+import RecipeItemList from "./components/RecipeItem.tsx";
 import "./Counter.css";
 import "./RecipeCard.css";
+
+const recipeItems = [
+  { name: "Lamb minced meat, kg", amount: 5 },
+  { name: "Onions, kg", amount: 2 },
+  { name: "Salt, tbsp", amount: 5 },
+  { name: "Pepper, tbsp", amount: 4 },
+  { name: "Hot chilli, tsp", amount: 3 },
+];
 
 function App() {
   function handleCounterChange(value: number) {
@@ -34,9 +42,9 @@ function App() {
             />
           </Col>
         </Row>
-        <Row className="mt-2 mb-2">
+        <Row className="recipe-item-list mt-2 mb-2">
           <Col>
-          <RecipeItem name="Hot chili, tsp " amount={3}/>
+          <RecipeItemList items={recipeItems} />
           </Col>
         </Row>
         <Row className="recipe-card-row">

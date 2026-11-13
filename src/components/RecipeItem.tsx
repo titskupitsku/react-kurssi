@@ -1,23 +1,26 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 
-type Props = {
+type RecipeItem = {
   name: string;
   amount: number;
 };
 
-function RecipeItem({ name, amount }: Props) {
+type Props = {
+  items: RecipeItem[];
+};
+
+export default function RecipeItemList({ items }: Props) {
   return (
-    <Container className="RecipeItem">
-      <Row>
-        <Col>
-          <span>{name}</span>
-        </Col>
-        <Col>
-          <span>{amount}</span>
-        </Col>
-      </Row>
-    </Container>
+    <ListGroup>
+      {items.map((item) => (
+        <ListGroup.Item
+          key={item.name}
+          className="d-flex justify-content-between"
+        >
+          <span>{item.name}</span>
+          <span>{item.amount}</span>
+        </ListGroup.Item>
+      ))}
+    </ListGroup>
   );
 }
-
-export default RecipeItem;
